@@ -9,16 +9,16 @@ Contributors
 
 Sprint 1
 
-Flavia Tasellari,
-Ankel Lazaj
+- Flavia Tasellari
+- Ankel Lazaj
 
 Built with:
 
-HTML
-CSS
-JavaScript
-PHP
-MySQL
+-HTML
+-CSS
+-JavaScript
+-PHP
+-MySQL
 
 Implementation:
 
@@ -48,6 +48,17 @@ Tests: test.html which redirects to 4 different pages to try different test case
 The only instance accepted in Agent login is:
 username: agent1234,
 password: corona_statistics1
+
+Hospital login:
+username: 
+1. Johns_Hopkins_Hospital
+2. Alpha_Health_Hospital
+3. 24hr_Service_Clinic
+password:
+1. hospital_hopkins1
+2. alphahealth777
+3. service_clinic!
+
 
 
 
