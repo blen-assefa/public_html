@@ -9,7 +9,7 @@ Contributors
 
 Sprint 1
 
-Flavia Tasellari
+Flavia Tasellari,
 Ankel Lazaj
 
 Built with:
@@ -46,7 +46,7 @@ Implementation:
 Tests: test.html which redirects to 4 different pages to try different test cases for login/registration validation for Visitors, Places, Agent, Hospital
 
 The only instance accepted in Agent login is:
-username: agent1234
+username: agent1234,
 password: corona_statistics1
 
 
