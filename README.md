@@ -96,7 +96,7 @@ You will also need a MYSQL database for this project. To create one:
         password: password 
 
 #
-
+#
 # SE-Sprint01-Team17
 
 Link to the application: http://clabsql.clamv.jacobs-university.de/~ftasellari/Corona/main_page.html
