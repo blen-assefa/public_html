@@ -1,11 +1,11 @@
 # SE-Sprint-02-Team-17
-The application is hosted on Clamv. It can be accessed via: 
+The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/) or copy and paste the following link into your browser.
 
-    clabsql.clamv........................
+    https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/
 
 ## Contributors (Sprint 2):
-    - Suraj Giri
-    - Saad Aboujid
+    * Suraj Giri
+    * Saad Aboujid
 
 ## Built with:
     - HTML
@@ -22,6 +22,20 @@ Corona Archive is an application that aims to track COVID (Corona) Infections vi
 - html5
 - 
 
+## Sprint 2 Changes Done:
+- [x] Restructured the databse structure as Database missed many columns in various tables. 
+- [x] Updated database entries to easier values for testing.
+- [x] Updated the whole frontend.
+- [x] **Places Login** page was created as Places could only register and genereate QR code once, which would create problems if the place lost QR code.
+- [x] QR generation (encoded with the registration data) for Places was Added.
+- [x] Added the feature to see the information and generate the QR code again after Logging In for Places.
+- [x] **Hospital Adding** feature was added to the **Agent** as Agents could not add Hospitals.
+- [x] Added hospital analytics observation to agent.
+- [x] Added Visitor Log In functionality.
+- [x] Added QR Scan Result showing functionality after Visitor Login.
+- [x] Separated all the **Log In** and **Registration** pages.
+- [x] Added the **Imprint**.
+- [x] 
 
 ## Dummy Login Credentials (Sprint 2):
 
