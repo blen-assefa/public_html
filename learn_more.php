@@ -24,10 +24,8 @@
 
     </div>
     <div class="infoline">
-        <h1>This web app was created as a project of Software Engineering Module of Jacobs University Bremen.</h1>
-        <h3>This website in general can be considered as Covid Management System. This Project was created on sprint basis.</h3><br>
-        <p><u> Sprint-02 </u> By:<br>1.
-            Suraj Giri <br> 2. Saad Aboujid</p> <br>
+        <h1>The Best Web Service for Corona Infections.</h1>
+        <h3>This web app was created as a project of Software Engineering Module of Jacobs University Bremen.</h3>
         <p>
             Copyright &copy JUB
             <script>

@@ -44,17 +44,21 @@ CREATE TABLE VisitorToPlaces (
 );
 
 INSERT INTO Visitor (visitor_id, visitor_name, visitor_address, visitor_phone, visitor_email, visitor_password, infected)
-VALUES (1, 'visitor1', 'visitor1 address', '1234567890', 'visitor1@visitor.com', 'password', 0),
-       (2, 'visitor2', 'visitor2 address', '1234567890', 'visitor2@visitor.com', 'password', 0);
+VALUES (1, 'First Visitor', 'visitor1 address', '1234567890', 'visitor1@gmail.com', 'password', 0),
+       (2, 'Second Visitor', 'visitor2 address', '1234567890', 'visitor2@gmail.com', 'password', 0),
+       (3, 'Third Visitor', 'visitor2 address', '1234567890', 'visitor3@gmail.com', 'password', 0);
+
 
 INSERT INTO Places (place_id, place_name, place_address, place_email, place_password)
-VALUES (1, 'place1', 'place1 address', 'place1@visitor.com', 'password'),
-       (2, 'place2', 'place2 address', 'place2@visitor.com', 'password');
+VALUES (1, 'First Place', 'place1 address', 'place1@gmail.com', 'password'),
+       (2, 'Second Place', 'place2 address', 'place2@gmail.com', 'password'),
+       (3, 'Third Place', 'place2 address', 'place3@gmail.com', 'password');
 
 INSERT INTO Agent (agent_id, agent_username, agent_password)
 VALUES (1, 'agent1', 'agent_password');
 
 INSERT INTO Hospital (hospital_id, hospital_username, hospital_address, hospital_password)
 VALUES (1, 'hospital1', 'hospital1_address', 'password'),
-       (2, 'hospital2', 'hospital2_address', 'password');
+       (2, 'hospital2', 'hospital1_address', 'password'),
+       (3, 'hospital3', 'hospital2_address', 'password');
 

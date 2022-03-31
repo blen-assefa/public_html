@@ -34,7 +34,9 @@
     <p>Get all the information you need about the places <br>
     you have entered, displaying, evaluating and <br>
     archiving the Corona infections in a particular location.</p>
-    <br><a href="imprint.php" class="design">Learn More</a>
+    <br><a href="imprint.php" class="design">Imprint</a>
+    <a href="learn_more.php" class="design">Learn More</a>
   </div>
 </body>
 </html>
+
