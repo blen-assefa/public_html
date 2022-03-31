@@ -7,13 +7,10 @@
 
     <?php 
     
-    $dbhost = 'localhost';
-    $user ='seteam17';
-    $pass ='XFc73r0J';
-    $db ='seteam17';
-    
-    
-    $conn= mysqli_connect('localhost', $user, $pass, $db);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    include("connect.php");
     ?>
 
     <ul>
@@ -70,7 +67,7 @@
     } else {
 
         // Insert into database
-        $sql = "INSERT INTO Visitor (visitor_name, v_address, v_phone_number, v_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
+        $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
         if (mysqli_query($conn, $sql)){
             echo "Registration successful";
         } else {

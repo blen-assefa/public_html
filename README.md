@@ -1,3 +1,68 @@
+# SE-Sprint-02-Team-17
+The application is hosted on Clamv. It can be accessed via: 
+
+    clabsql.clamv........................
+
+## Contributors (Sprint 2):
+    - Suraj Giri
+    - Saad Aboujid
+
+## Built with:
+    - HTML
+    - CSS
+    - JavaScript
+    - PHP
+    - MySQL
+
+## About the Project:
+Corona Archive is an application that aims to track COVID (Corona) Infections via contact tracing. In this appliation we have tried to track when a visitor enters any business (new place) by the help of a QR Code available at the place taht would be scanned by the visitor. Also, if any visitor who is in tge database is infected by COVID, then s/he would be marked infected by a hospital and if s/he is not Infected with COVID, then would be marked Not Infected. All hte analytics of the application is to be observed by the admin/agent.
+
+## Prerequisites
+- Mysql
+- html5
+- 
+
+
+## Dummy Login Credentials (Sprint 2):
+
+### Agent:
+    username: agent1
+    password: agent_password
+
+### Visitors: 
+    First Visitor:
+        email: visitor1@gmail.com
+        password: password
+    Second Visitor:
+        email: visitor2@gmail.com
+        password: password
+    Third Visitor:
+        email: visitor3@gmail.com
+        password: password
+
+### Places:
+    First Place:
+        email: place1@gmail.com
+        password: password
+    Second Place:
+        email: place2@gmail.com
+        password: password
+    Third Place:
+        email: place3@gmail.com
+        password: password 
+
+### Hospital:
+    First Hospital:
+        username: hospital1
+        password: password
+    Second HOspital:
+        username: hospital2
+        password: password
+    Third HOspital:
+        username: hospital3
+        password: password 
+
+#
 # SE-Sprint01-Team17
 
 Link to the application: http://clabsql.clamv.jacobs-university.de/~ftasellari/Corona/main_page.html
@@ -5,63 +70,59 @@ Link to the application: http://clabsql.clamv.jacobs-university.de/~ftasellari/C
 Corona Archive: a web service for Corona disease management which enables digital tracking of citizens which enter certain places and keeps the records in case of a 
 Covid infection spread.
 
-Contributors
+## Contributors (Sprint 1):
+    - Flavia Tasellari
+    - Ankel Lazaj
 
-Sprint 1
 
-- Flavia Tasellari
-- Ankel Lazaj
+## Built with:
+    - HTML
+    - CSS
+    - JavaScript
+    - PHP
+    - MySQL
 
-Built with:
+## Implementation (Done by Sprint 1):
 
-- HTML
-- CSS
-- JavaScript
-- PHP
-- MySQL
+    - Created database of Corona Archive
+    - Build the main page 
+    - Inserted redirection links from main page to the registration/login forms
+    - Created login form for agent
+    - Created login form for hospital
+    - Created registration for visitors
+    - Created registration for places
+    - Inserted data to the database
+    - Passed Device ID as hidden field
+    - Generated and displayed QR code
+    - Camera feature was enabled
+    - Displayed visitors tables in the Hospital page
+    - Displayed visitors tables in the Agent page
+    - Displayed places tables in the Agent page
+    - Implemented test cases
+    - Used CSS and JavaScript to make the pages more interactive
+    - Created 'Go Back' buttons
+    - Linked the pages together
+    - Implemented Search button in the Agent page which is yet to be functional
+    - Connected the client side with server side/database
 
-Implementation:
-
-- Created database of Corona Archive
-- Build the main page 
-- Inserted redirection links from main page to the registration/login forms
-- Created login form for agent
-- Created login form for hospital
-- Created registration for visitors
-- Created registration for places
-- Inserted data to the database
-- Passed Device ID as hidden field
-- Generated and displayed QR code
-- Camera feature was enabled
-- Displayed visitors tables in the Hospital page
-- Displayed visitors tables in the Agent page
-- Displayed places tables in the Agent page
-- Implemented test cases
-- Used CSS and JavaScript to make the pages more interactive
-- Created 'Go Back' buttons
-- Linked the pages together
-- Implemented Search button in the Agent page which is yet to be functional
-- Connected the client side with server side/database
-
-Tests: test.html which redirects to 4 different pages to try different test cases for login/registration validation for Visitors, Places, Agent, Hospital
+## Tests (Sprint 1): 
+    test.html which redirects to 4 different pages to try different test cases for login/registration validation for Visitors, Places, Agent, Hospital
 
 The only instance accepted in Agent login is:
 
 username: agent1234,
 password: corona_statistics1
 
-Hospital login:
+Hospital login :
 
-username: 
-1. Johns_Hopkins_Hospital
-2. Alpha_Health_Hospital
-3. 24hr_Service_Clinic
+    username: 
+    1. Johns_Hopkins_Hospital
+    2. Alpha_Health_Hospital
+    3. 24hr_Service_Clinic
 
-password:
-1. hospital_hopkins1
-2. alphahealth777
-3. service_clinic!
-
-
+    password:
+    1. hospital_hopkins1
+    2. alphahealth777
+    3. service_clinic!
 
 

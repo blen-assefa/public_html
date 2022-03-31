@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['suser'])){
+    if(!isset($_SESSION['auser'])){
         header('Location: agency_login.php');
     } else {
 ?>
@@ -14,13 +14,10 @@
 <body> 
     <?php 
     
-    $dbhost = 'localhost';
-    $user ='seteam17';
-    $pass ='XFc73r0J';
-    $db ='seteam17';
-    
-    
-    $conn= mysqli_connect('localhost', $user, $pass, $db);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    include("connect.php");
 
     $result = mysqli_query($conn, "SELECT * FROM Visitor");
     ?>
@@ -31,12 +28,12 @@
 
 
     <table id="entity_table">
-        <tr> <th>Name</th> <th>Address</th> <th>Phone</th> <th>Email</th> <th>Infected</th> </tr>
+        <tr> <th>Visitor</th> <th>Address</th> <th>Phone</th> <th>Email</th> <th>Infected</th> </tr>
         <?php while ($array = mysqli_fetch_assoc($result)) { ?>
         <tr><td> <?php echo $array["visitor_name"]; ?> </td>
-        <td> <?php echo $array["v_address"]; ?> </td>
-        <td> <?php echo $array["v_phone_number"]; ?> </td>
-        <td> <?php echo $array["v_email"]; ?> </td>
+        <td> <?php echo $array["visitor_address"]; ?> </td>
+        <td> <?php echo $array["visitor_phone"]; ?> </td>
+        <td> <?php echo $array["visitor_email"]; ?> </td>
         <td> <?php if ($array["infected"] = 0) {
                             echo "infected";
                     }else {

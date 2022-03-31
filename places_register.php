@@ -1,60 +1,83 @@
+<!DOCTYPE html>
 <html>
-    
+
 <head>
-<meta name = "viewport", content="width = device-width, initial-scale=1">
-<link rel = "stylesheet" href = "table.css">
+    <meta name="viewport" , content="width = device-width, initial-scale=1">
+    <title> Corona Archive </title>
+    <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
+  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
+    <link rel="stylesheet" href="t.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+    <?php
 
-    <?php 
-    
-    $dbhost = 'localhost';
-    $user ='seteam17';
-    $pass ='XFc73r0J';
-    $db ='seteam17';
-    
-    
-    $conn= mysqli_connect('localhost', $user, $pass, $db);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    include("connect.php");
     ?>
 
-    <ul>
-    <button class="button" >   <a href="main_page.html" class="back"> Go back </a> </button>
-    </ul>
-
-    <h3> Registration form </h3>
-    <form action="places_register.php" method="post">
-    <div class="imgcontainer">
-    <img src="pl.jpg" alt="Avatar" class="avatar">
-    </div>
-    <div class="container">
-        <b>Name:<b><input type="text" name="name"><br>
-        <b>Address:<b><input type="text" name="address"><br><br>
-        <input type="submit" name="signup">
+    <div class="hero">
+        <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
+        <a href="register.php" class="back"><button class="back-btn"> Go back </button></a>
+        <div class="form-box-pr">
+            <div class="hp-text">
+                <h2>Registration Form</h2>
+            </div>
+            <div class="logo-hp">
+                <img src="./images/pl.jpg">
+            </div>
+            <form action="places_register.php" method="post" class="input-grp">
+                <input type="text" name="name" class="input-field" placeholder="Full Name">
+                <input type="text" name="address" class="input-field" placeholder="Address">
+                <input type="text" name="email" class="input-field" placeholder="Email">
+                <input type="password" name="password" class="input-field" placeholder="password">
+                <input type="hidden" name="deviceID" id="deviceID" value="">
+                <input type="submit" name="signup">
+            </form>
         </div>
-    </form>
+    </div>
 
     <?php
     if (isset($_POST['signup'])) {
-    $name = $_POST['name'];
-    $address = $_POST['address'];
-    
-    if ($name == '' || $address == '') {
-        echo 'Information cannot be empty';
-    } elseif (!preg_match("/^[a-zA-Z ]+$/",$name)) { // Name Constraint
-        echo 'Invalid name';
-        error_log ("Invalid name", 0); 
-    } else {
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        // Insert into database
-        $sql = "INSERT INTO Places (place_name, place_address) VALUES ('$name', '$address')";
-        if (mysqli_query($conn, $sql)){
-            header("Location:places_qrcode.html"); 
+        if ($name == '' || $address == '' || $password == '') {
+            echo 'Information cannot be empty';
+        // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
+        //     echo 'Invalid name';
+        //     error_log("Invalid name", 0);
+        } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
+            echo 'Invalid email';
+            error_log("Invalid email", 0);
         } else {
-            echo 'Failed to register';
-        }
-    }
 
+            // Insert into database
+            $sql = "INSERT INTO Places (place_name, place_address, place_email, place_password) VALUES ('$name', '$address', '$email', '$password')";
+            if (mysqli_query($conn, $sql)) {
+?>
+ <!-- starting session to generate qr -->
+                <?php
+                session_start();
+                $_SESSION['puser'] = $email;
+
+
+                header("Location:places_qrcode.php");
+            } else {
+                echo 'Failed to register';
+            }
+        }
     }
 
     ?>

@@ -1,42 +1,60 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['suser'])){
-        header('Location: agency_login.php');
-    } else {
+session_start();
+if (!isset($_SESSION['auser'])) {
+    header('Location: agency_login.php');
+} else {
 ?>
 
-<html>
-<head>
-<meta name = "viewport", content="width = device-width, initial-scale=1">
-<link rel = "stylesheet" href = "table.css">
-</head>
+    <html>
 
-<body> 
-    <ul>
-        <li> <button class="button" > <a href="agency_logout.php" class="back"> Log out </a> </button>  </li>
-    </ul>
+    <head>
+        <meta name="viewport" , content="width = device-width, initial-scale=1">
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="t.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <div id="t1">
-    <a href="agency_visitor.php" class="back"> View visitors list </a> <br>
-    </div>
-    <br>
-    <div id="t2">
-    <a href="agency_places.php" class="back"> View places list </a>
-    </div>
-    <br>
+    <body>
+        <div class="hero">
+            <a href="agency_logout.php" class="back"><button class="back-btn"> Log Out </button></a>
+
+            <div class="title">
+                <a href="agency_add_hospital.php"><button type="button" class="back">Add Hospitals</button></a>
+                <!-- <div id="t1"> -->
+                <!-- <a href="agency_visitor.php" class="back"> View Visitors list </a> <br> -->
+                <a href="agency_visitor.php"><button type="button" class="back">View Visitors</button></a>
+
+                <!-- </div> -->
+                <!-- <br> -->
+                <!-- <div id="t2"> -->
+                <a href="agency_places.php"><button type="button" class="back">View Places</button></a>
+                <!-- </div> -->
+                <!-- <br> -->
+                <!-- <div id="t2"> -->
+                <a href="agency_hospital.php"><button type="button" class="back">View Hospitals</button></a>
+                <!-- </div> -->
+
+            </div>
 
 
-    <form action="agency.php">
-        <input type="text" placeholder="Search.." name="search">
-    </form>
+            <!-- <a href="" class="back">
+                <form action="agency.php">
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+            </a> -->
+
+            <!-- <form action="agency.php">
+                <input type="text" placeholder="Search.." name="search">
+            </form> -->
+        </div>
 
 
 
 
 
-</body>
+    </body>
 
-</html>
+    </html>
 <?php
-    }
+}
 ?>
