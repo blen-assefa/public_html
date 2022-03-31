@@ -4,8 +4,8 @@ The application is hosted on Clamv. It can be accessed via: [Corona Archive](htt
     https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/
 
 ## Contributors (Sprint 2):
-    * Suraj Giri
-    * Saad Aboujid
+        * Suraj Giri
+        * Saad Aboujid
 
 ## Built with:
     - HTML
