@@ -104,7 +104,7 @@ P.S. You need to have a XAMP(if you use windows) or LAMP stack(if you use LinuX 
 - [x] Added requirements.txt file
 - [x] Added the Testing. It wasn't previously included. We tried to implement the Unit Testing in PHP but it kept failing. So we used the Unit Test in Python.
 
-### For testing using Python
+### For Unit Testing using Python
     Note that either you have to be connected to a internet inside the university or you have to be
     connected to JacobsVPN to acccess the clamv because the url used for testing is borrowed from ClamV.
     Open terminal in the cd se-02-team-17 folder and run:
