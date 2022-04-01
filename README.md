@@ -41,6 +41,8 @@ You will also need a MYSQL database for this project. To create one:
     mysql> source se_database.sql
     mysql> exit
 
+Go to http://localhost: and then the relative path to where you cloned this Repo. <br>
+P.S. You need to have a XAMP(if you use windows) or LAMP stack(if you use LinuX or Mac) installed.
 
 ## File Structure
 	\se-print-02-team-17 	# github's branch
