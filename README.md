@@ -109,6 +109,16 @@ You will also need a MYSQL database for this project. To create one:
 
     $ python ./tests/test.py
 
+### for connecting to Jacobs VPN:
+    follow the link: 
+    https://vpnasa.jacobs-university.de/
+    or 
+    install Cisco anyconnect Application following the link: 
+    https://teamwork.jacobs-university.de/display/ircit/VPN+Access
+    
+    username: {your campusnet USERNAME}
+    password: {your campusnet PASSWORD}
+
 ## Dummy Login Credentials (Sprint 2):
 
 ### Agent:
