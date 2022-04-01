@@ -113,7 +113,7 @@ You will also need a MYSQL database for this project. To create one:
 
 follow the link: 
 https://vpnasa.jacobs-university.de/
-or 
+or <br>
 install Cisco anyconnect Application following the link: 
 https://teamwork.jacobs-university.de/display/ircit/VPN+Access
 
