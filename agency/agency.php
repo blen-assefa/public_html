@@ -8,10 +8,11 @@ if (!isset($_SESSION['auser'])) {
     <html>
 
     <head>
+        <title>Corona Archive - Agent Options</title>
         <meta name="viewport" , content="width = device-width, initial-scale=1">
-        <link rel="stylesheet" href="table.css">
-        <link rel="stylesheet" href="t.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/table.css">
+        <link rel="stylesheet" href="../css/t.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
 
     <body>

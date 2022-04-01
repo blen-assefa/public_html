@@ -7,7 +7,8 @@ if (!isset($_SESSION['puser'])) {
     <html lang="en">
 
     <head>
-        <link rel="stylesheet" href="t.css">
+        <title>Corona Archive - Place Info</title>
+        <link rel="stylesheet" href="../css/t.css">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +21,7 @@ if (!isset($_SESSION['puser'])) {
 
     <body>
         <div class="hero">
-            <a href="places_logout.php" class="back"><button class="back-btn"> Log Out </button></a>
+            <a href="./places_logout.php" class="back"><button class="back-btn"> Log Out </button></a>
             <div class="infoline">
 
 
@@ -28,7 +29,7 @@ if (!isset($_SESSION['puser'])) {
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
-                include("connect.php");
+                include("../connect.php");
 
                 // if (isset($_POST["search"])) {
                 $email = $_SESSION['puser'];
@@ -55,7 +56,7 @@ if (!isset($_SESSION['puser'])) {
                 <div class="form-box-pr">
                     <div class="data">
                         <div class="logo-hp">
-                            <img src="./images/pl.jpg">
+                            <img src="../images/pl.jpg">
                         </div>
                         <hr width="500px">
                         <div class="text">
@@ -75,7 +76,7 @@ if (!isset($_SESSION['puser'])) {
                         <input type="submit" id="button1" onclick="generateQR()" value="Get QR">
 
                         <div id="qrcode">
-                            <script type="text/javascript" src="qr_generator.js"></script>
+                            <script type="text/javascript" src="./qr_generator.js"></script>
                         </div>
 
                     </div>

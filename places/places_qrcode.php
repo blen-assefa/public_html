@@ -10,8 +10,8 @@ else {
     <html lang="en">
 
     <head>
-        <link rel="stylesheet" href="t.css">
-        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="../css/t.css">
+        <link rel="stylesheet" href="../css/table.css">
 
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -33,7 +33,7 @@ else {
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
-                include("connect.php");
+                include("../connect.php");
 
                 // if (isset($_POST["search"])) {
                 $email = $_SESSION['puser'];

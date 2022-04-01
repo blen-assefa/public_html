@@ -54,7 +54,8 @@ You will also need a MYSQL database for this project. To create one:
 - [x] Added QR Scan Result showing functionality after Visitor Login.
 - [x] Separated all the **Log In** and **Registration** pages.
 - [x] Added the **Imprint**.
-- [x] 
+- [x] Used **SESSION** keys to redirect Visitor Registration to **Scanning Pages**.
+- [x] Used **SESSION** keys to redirect Places Registration to **QR Generation Pages**.
 
 ## Dummy Login Credentials (Sprint 2):
 
