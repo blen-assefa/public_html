@@ -103,7 +103,8 @@ You will also need a MYSQL database for this project. To create one:
 - [x] Added the testing. We tried to implement the Unit Testing in PHP but it kept failing. So we tested using unit test in Python.
 
 ### For testing using Python
-    Note that either you have to be connected to a internet inside the university or you have to be connected to JacobsVPN to acccess the clamv.
+    Note that either you have to be connected to a internet inside the university or you have to be
+    connected to JacobsVPN to acccess the clamv.
     Open terminal in the cd se-02-team-17 folder and run:
 
     $ python ./tests/test.py
@@ -153,7 +154,6 @@ You will also need a MYSQL database for this project. To create one:
 - [ ] Implement date and time fetching feature from visitor's device.
 - [ ] Hospitals Searching Visitors by name
 - [ ] Manage the required respective analysis for the agent.
-- [ ] 
 
 #
 #
