@@ -1,3 +1,4 @@
+<!-- Using the session for the agent to get the data if the agent is logged in -->
 <?php
     session_start();
     if(!isset($_SESSION['auser'])){
@@ -26,6 +27,7 @@
         <button class="button" ><a href="agency.php" class="back"> Go back </a> </button>
     </ul>
 
+    <!-- Showing the data about hospitals in the form of a table -->
     <table id="entity_table">
         <tr> <th>Hospital</th> <th>Address</th> </tr>
         <?php while ($array = mysqli_fetch_assoc($result)) { ?>

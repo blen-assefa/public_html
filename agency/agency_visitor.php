@@ -1,3 +1,4 @@
+<!-- Using the session for the agent to get the data if the agent is logged in -->
 <?php
 session_start();
 if (!isset($_SESSION['auser'])) {
@@ -14,13 +15,15 @@ if (!isset($_SESSION['auser'])) {
     </head>
 
     <body>
-        <?php
 
+        <!-- connecting to the database  -->
+        <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
         include("../connect.php");
 
+        // getting data from the database 
         $result = mysqli_query($conn, "SELECT * FROM Visitor");
         ?>
 
@@ -29,6 +32,7 @@ if (!isset($_SESSION['auser'])) {
         </ul>
 
 
+        <!-- displaying the data from the database in the form of table  -->
         <table id="entity_table">
             <tr>
                 <th>Visitor</th>

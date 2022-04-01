@@ -4,8 +4,6 @@
 <head>
   <meta name="viewport" , content="width = device-width, initial-scale=1">
   <title> Corona Archive - Register </title>
-  <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
-  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/t.css">
   <link rel="stylesheet" href="./css/table.css">

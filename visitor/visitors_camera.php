@@ -1,3 +1,4 @@
+<!-- Using the session for the Visitor to get the data if the Visitor is logged in -->
 <?php
 session_start();
 if (!isset($_SESSION['vuser'])) {
@@ -27,10 +28,6 @@ if (!isset($_SESSION['vuser'])) {
 
             <a href="visitor_logout.php" class="back"><button class="back-btn"> Log Out </button></a>
 
-            <!-- <ul>
-                <li> <button class="button"> <a href="visitor_logout.php" class="back"> Log out </a> </button> </li>
-            </ul> -->
-
             <div class="scanner">
 
             <div class="hp-text">
@@ -39,16 +36,16 @@ if (!isset($_SESSION['vuser'])) {
                 </h2>
             </div>
 
+            <!-- creating the QR scanner  -->
             <div class="hp-text">
                 <video id="preview"></video>
-                <!-- <input type="text" name="text" id="text" readonly="" placeholder="scan qr"> -->
                 <script type="text/javascript">
                     let scanner = new Instascan.Scanner({
                         video: document.getElementById('preview')
                     });
                     scanner.addListener('scan', function(content) {
                         document.getElementById("text").value = content
-                        // window.location.replace(content);
+                        // window.location.replace(content); //this line redirects to the data encoded in the QR for eg. if a link in encoded then to that link
                     });
                     Instascan.Camera.getCameras().then(function(cameras) {
                         if (cameras.length > 0) {
@@ -61,7 +58,7 @@ if (!isset($_SESSION['vuser'])) {
                     });
                 </script>
                 <div class="hp-text">
-                    <input type="text" name="text" id="text" readonly="" placeholder="scan qr">
+                    <input type="text" name="text" id="text" readonly="" placeholder="QR Data">
                 </div>
 
             </div>

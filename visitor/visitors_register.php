@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!-- connecting to the db  -->
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -65,6 +66,7 @@
     </script>
 
     <?php
+    // initiating post for the data to be entered 
     if (isset($_POST['signup'])) {
         $name = $_POST['name'];
         $address = $_POST['address'];
@@ -76,6 +78,7 @@
         $minDigits = 9;
         $maxDigits = 14;
 
+        // shows error message if the respective fields are left empty 
         if ($name == '' || $address == '' || $phone == '' || $email == '' || $password == '') {
             echo 'Information cannot be empty';
         } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
@@ -96,6 +99,7 @@
     ?>
 
     <?php
+    // creating session for the visitor so that the recently entered registration data can be used while scanning 
                 session_start();
                 $_SESSION['vuser'] = $email;
                 header("Location:visitors_camera.php");
@@ -109,8 +113,6 @@
     }
 
     ?>
-
-
 </body>
 
 </html>

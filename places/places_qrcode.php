@@ -1,12 +1,11 @@
+<!-- Using the session for the Places to get the data if the Places is logged in -->
 <?php
 session_start();
 if (!isset($_SESSION['puser'])) {
     header('Location: places_register.php');
-}
-// if(isset($_SESSION['puser'])) {
-//     session_start();
-else {
+} else {
 ?>
+
     <html lang="en">
 
     <head>
@@ -29,16 +28,16 @@ else {
 
             <div class="form-box-pr">
 
+                <!-- connecting to the database  -->
                 <?php
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
                 include("../connect.php");
 
-                // if (isset($_POST["search"])) {
                 $email = $_SESSION['puser'];
-                // database search SQL code
 
+                // getting data from the database 
                 $search = "SELECT * FROM Places WHERE place_email like '$email'";
 
                 $result = mysqli_query($conn, $search);
@@ -46,11 +45,8 @@ else {
                 if ($queryResults > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $a = $row["place_id"];
-                        // echo ".$a.";
                         $b = $row["place_name"];
-                        // echo ".$b.";
                         $c = $row["place_address"];
-                        // echo ".$c.";
                     }
                 }
 
@@ -61,8 +57,8 @@ else {
                     <h2> Get the QR code by clicking "Get QR" below !</h2>
                 </div>
 
+                <!-- generating the QR code with the registration data about that place from previous page  -->
                 <input type="text" value="Place ID: <?php echo $a ?>, Place: <?php echo $b ?>,  Address: <?php echo $c ?>" id="qr-data">
-                <!-- <a href=""><button type="button" id="button1" onclick="generateQR()"> Get QR </button></a> -->
                 <input type="submit" id="button1" onclick="generateQR()" value="Get QR">
 
                 <div style="display: flex;justify-content:center" id="qrcode">

@@ -1,4 +1,4 @@
-<?php
+<!-- Using the session for the places to get the data if the places is logged in --><?php
 session_start();
 if (!isset($_SESSION['puser'])) {
     header('Location: places_login.php');
@@ -16,7 +16,6 @@ if (!isset($_SESSION['puser'])) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
-
     </head>
 
     <body>
@@ -25,34 +24,33 @@ if (!isset($_SESSION['puser'])) {
             <div class="infoline">
 
 
+            <!-- connecting to the database  -->
                 <?php
                 ini_set('display_errors', 1);
                 ini_set('display_startup_errors', 1);
                 error_reporting(E_ALL);
                 include("../connect.php");
 
-                // if (isset($_POST["search"])) {
                 $email = $_SESSION['puser'];
-                // database search SQL code
 
-
+                // getting data from the database 
                 $search = "SELECT * FROM Places WHERE place_email like '$email'";
 
+                // declaring variables for the data from the db 
                 $result = mysqli_query($conn, $search);
                 $queryResults = mysqli_num_rows($result);
                 if ($queryResults > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         $a = $row["place_id"];
-                        // echo ".$a.";
                         $b = $row["place_name"];
-                        // echo ".$b.";
                         $c = $row["place_address"];
-                        // echo ".$c.";
                         $d = $row["place_email"];
                     }
                 }
 
                 ?>
+
+                <!-- showing the data about that logged in place using the variables -->
                 <div class="form-box-pr">
                     <div class="data">
                         <div class="logo-hp">
@@ -72,18 +70,16 @@ if (!isset($_SESSION['puser'])) {
                         <div class="hp-text">
                             <b> Get the QR code by clicking "Get QR" below !</b>
                         </div>
+
+                        <!-- generating the QR code with the primary data about that place  -->
                         <input type="" value="Place ID: <?php echo $a ?>, Place: <?php echo $b ?>,  Address: <?php echo $c ?>" id="qr-data">
                         <input type="submit" id="button1" onclick="generateQR()" value="Get QR">
-
                         <div style="display: flex;justify-content:center" id="qrcode">
                             <script type="text/javascript" src="./qr_generator.js"></script>
                         </div>
-
                     </div>
-
                 </div>
     </body>
-
     </html>
 <?php
 }

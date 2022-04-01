@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!-- connecting to the database  -->
     <?php
 
     ini_set('display_errors', 1);
@@ -36,6 +37,7 @@
             <div class="logo-hp">
                 <img src="../images/pl.jpg">
             </div>
+
             <form action="places_register.php" method="post" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Full Name">
                 <input type="text" name="address" class="input-field" placeholder="Address">
@@ -48,18 +50,18 @@
     </div>
 
     <?php
+
+
     if (isset($_POST['signup'])) {
         $name = $_POST['name'];
         $address = $_POST['address'];
         $email = $_POST['email'];
         $password = $_POST['password'];
 
+        // display error if fields left empty 
         if ($name == '' || $address == '' || $password == '') {
             echo 'Information cannot be empty';
-            // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
-            //     echo 'Invalid name';
-            //     error_log("Invalid name", 0);
-        } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
+        } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraints
             echo 'Invalid email';
             error_log("Invalid email", 0);
         } else {

@@ -1,11 +1,11 @@
+<!-- This is the imprint page  -->
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive </title>
-    <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
-  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>

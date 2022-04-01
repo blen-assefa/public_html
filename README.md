@@ -1,7 +1,7 @@
 # SE-Sprint-02-Team-17
-The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/) or copy and paste the following link into your browser.
+The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/se-02-team-17/) or copy and paste the following link into your browser.
 
-    https://clabsql.clamv.jacobs-university.de/~sgiri/sprint-2/
+   https://clabsql.clamv.jacobs-university.de/~sgiri/se-02-team-17/
 
 ## Contributors (Sprint 2):
     * Suraj Giri
@@ -74,9 +74,11 @@ You will also need a MYSQL database for this project. To create one:
     |---\places
     |   |
     |   |--- # All the Files Related to the Places
-    |---|visitor
+    |---\visitor
     |   |
     |   |--- # All the Files Related to the Visitors
+    |---\tests
+    |   |--- # Includes the file for unit testing using Python.
     
    
 
@@ -95,6 +97,16 @@ You will also need a MYSQL database for this project. To create one:
 - [x] Added the **Imprint**.
 - [x] Used **SESSION** keys to redirect Visitor Registration to **Scanning Pages**.
 - [x] Used **SESSION** keys to redirect Places Registration to **QR Generation Pages**.
+- [x] Created the button for changing the visitor infected status but it does bot work properly.
+- [x] Added the .gitignore file.
+- [x] Added requirements.txt file
+- [x] Added the testing. We tried to implement the Unit Testing in PHP but it kept failing. So we tested using unit test in Python.
+
+### For testing using Python
+    Note that either you have to be connected to a internet inside the university or you have to be connected to JacobsVPN to acccess the clamv.
+    Open terminal in the cd se-02-team-17 folder and run:
+
+    $ python ./tests/test.py
 
 ## Dummy Login Credentials (Sprint 2):
 
@@ -128,12 +140,20 @@ You will also need a MYSQL database for this project. To create one:
     First Hospital:
         username: hospital1
         password: password
-    Second HOspital:
+    Second Hospital:
         username: hospital2
         password: password
     Third HOspital:
         username: hospital3
         password: password 
+
+## Future Updates
+- [ ] Connect the String Decoded by the QR scanner to the database.
+- [ ] Implement the relation between the visitors and places.
+- [ ] Implement date and time fetching feature from visitor's device.
+- [ ] Hospitals Searching Visitors by name
+- [ ] Manage the required respective analysis for the agent.
+- [ ] 
 
 #
 #

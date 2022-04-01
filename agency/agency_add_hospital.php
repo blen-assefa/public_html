@@ -4,8 +4,6 @@
 <head>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive - Add Hospitals </title>
-    <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
-  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
     <link rel="stylesheet" href="../css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -17,8 +15,9 @@
 </head>
 
 <body>
-    <?php
 
+    <!-- Connecting the Database -->
+    <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -45,19 +44,16 @@
     </div>
 
     <?php
+    // Getting the data ready, from the form, to be inserted into the db
     if (isset($_POST['signup'])) {
         $username = $_POST['name'];
         $address = $_POST['address'];
         $password = $_POST['password'];
 
+        // Checking the constraints for the data for the Hospitals
         if ($username == '' || $address == '' || $password == '') {
             echo 'Information cannot be empty';
-            // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
-            //     echo 'Invalid name';
-            //     error_log("Invalid name", 0);
-            // } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
-            //     echo 'Invalid email';
-            //     error_log("Invalid email", 0);
+
         } else {
 
             // Insert into database

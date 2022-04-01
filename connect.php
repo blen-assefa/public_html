@@ -1,3 +1,7 @@
+<!-- main connection page
+    Database is connected here. 
+    All other files only contain this instance of the connection -->
+
 <?php
 
 ini_set('display_errors', 1);
@@ -13,3 +17,4 @@ $conn = mysqli_connect($dbhost, $user, $pass, $db);
 if ($conn->connect_error) {
     echo "<script type='text/javascript'>alert('Connection Failed');</script>";
 }
+?>

@@ -18,8 +18,8 @@
 
 <body>
 
+<!-- connecting to the database  -->
     <?php
-
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -45,6 +45,8 @@
         </div>
     </div>
     <?php
+
+    // Getting the data ready, from the login form, to be inserted into the db
     if (isset($_POST['signup'])) {
         if (!empty($_POST['username']) && !empty($_POST['password'])) {
             $username = $_POST['username'];
@@ -53,6 +55,7 @@
             $result = mysqli_query($conn, "SELECT hospital_username, hospital_password FROM Hospital WHERE hospital_username = '$username' AND hospital_password = '$password'");
             $array = mysqli_fetch_assoc($result);
 
+            // creating the session for the hospital for the operations after login
             if ($array != NULL) {
                 session_start();
                 $_SESSION['huser'] = $username;
@@ -66,12 +69,7 @@
             error_log("Empty required fields", 0);
         }
     }
-
     ?>
-
-
-
-
 </body>
 
 </html>

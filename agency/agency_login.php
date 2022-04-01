@@ -4,8 +4,6 @@
 <head>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive - Agent Login</title>
-    <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
-  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
     <link rel="stylesheet" href="../css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -18,6 +16,7 @@
 
 <body>
 
+    <!-- connecting to the database  -->
     <?php
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
@@ -52,10 +51,12 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
 
+            // fetching data from the database 
             $result = mysqli_query($conn, "SELECT agent_username, agent_password FROM Agent WHERE agent_username = '$username' AND agent_password = '$password'");
 
             $array = mysqli_fetch_assoc($result);
 
+            // creating the session for the agent user for the operations after login 
             if ($array != NULL) {
                 session_start();
                 $_SESSION['auser'] = $username;

@@ -4,8 +4,6 @@
 <head>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive - Visitor Login</title>
-    <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
-  <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
     <link rel="stylesheet" href="../css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
@@ -18,13 +16,12 @@
 
 <body>
 
+<!-- connecting to the database  -->
     <?php
-
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     include("../connect.php");
-
     ?>
 
     <div class="hero">
@@ -46,16 +43,20 @@
         </div>
     </div>
     <?php
+
+    // initiating post from the login form 
     if (isset($_POST['signup'])) {
 
         if (!empty($_POST['email']) && !empty($_POST['password'])) {
             $email = $_POST['email'];
             $password = $_POST['password'];
 
+            // getting the data from the database 
             $result = mysqli_query($conn, "SELECT visitor_email, visitor_password FROM Visitor WHERE visitor_email = '$email' AND visitor_password = '$password'");
 
             $array = mysqli_fetch_assoc($result);
 
+            // creating the session for the visitor for the data to be accessed after login
             if ($array != NULL) {
                 session_start();
                 $_SESSION['vuser'] = $email;
