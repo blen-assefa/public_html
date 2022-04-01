@@ -70,17 +70,5 @@ class CoronArchiveTestCase(unittest.TestCase):
         response = requests.post(self.API_URL+"visitor/visitors_register.php", data=data)
         self.assertIn("Visitor Registration Form", response.text)
 
-    def test_visitorFailedRegistration(self):
-        data = {
-            "name":"",
-            "address" :"",
-            "phone":"",
-            "email" : "",
-            "password" : "",
-            }
-        response = requests.post(self.API_URL+"visitor/visitors_register.php", data=data)
-        print(response)
-        # self.assertIn("Information cannot be empty", response.text)
-
 if __name__ == '__main__':
     unittest.main()

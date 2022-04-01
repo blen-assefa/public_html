@@ -1,5 +1,6 @@
 # SE-Sprint-02-Team-17
-The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/se-02-team-17/) or copy and paste the following link into your browser.
+The application is hosted on Clamv. It can be accessed via: [Corona Archive](https://clabsql.clamv.jacobs-university.de/~sgiri/se-02-team-17/) or copy and paste the following link into your browser. 
+The application can also be manually tested with the dummy data provided within this readme file.
 
    https://clabsql.clamv.jacobs-university.de/~sgiri/se-02-team-17/
 
