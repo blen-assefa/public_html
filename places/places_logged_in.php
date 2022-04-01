@@ -75,7 +75,7 @@ if (!isset($_SESSION['puser'])) {
                         <input type="" value="Place ID: <?php echo $a ?>, Place: <?php echo $b ?>,  Address: <?php echo $c ?>" id="qr-data">
                         <input type="submit" id="button1" onclick="generateQR()" value="Get QR">
 
-                        <div id="qrcode">
+                        <div style="display: flex;justify-content:center" id="qrcode">
                             <script type="text/javascript" src="./qr_generator.js"></script>
                         </div>
 

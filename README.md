@@ -41,6 +41,45 @@ You will also need a MYSQL database for this project. To create one:
     mysql> source se_database.sql
     mysql> exit
 
+
+## File Structure
+	\se-print-02-team-17 	# github's branch
+    |
+    |---\connect.php
+    |
+    |---\imprint.php
+    |
+    |---\index.php
+    |
+    |---\learn_more.php
+    |
+    |---\login.php
+    |
+    |---\register.php
+    |
+    |---\se_database.sql
+    |
+    |---\agency
+    |   |
+    |   |--- # All the Files Related to the Agent 
+    |---\css
+	|	|
+    |   |--- # All the CSS Files
+	|---\hospital
+    |   |
+    |   |--- # All the Files Related to the Hospital
+    |---\images
+    |   |
+    |   |--- # All the images used.
+    |---\places
+    |   |
+    |   |--- # All the Files Related to the Places
+    |---|visitor
+    |   |
+    |   |--- # All the Files Related to the Visitors
+    
+   
+
 ## Sprint 2 Changes Done:
 - [x] Restructured the databse structure as Database missed many columns in various tables. 
 - [x] Updated database entries to easier values for testing.

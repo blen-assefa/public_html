@@ -45,10 +45,10 @@ if (!isset($_SESSION['huser'])) {
                         <td> <?php echo $array["visitor_address"]; ?> </td>
                         <td> <?php echo $array["visitor_phone"]; ?> </td>
                         <td> <?php echo $array["visitor_email"]; ?> </td>
-                        <td> <?php if ($array["infected"] = 0) {
-                                    echo "infected";
-                                } else {
+                        <td> <?php if ($array["infected"] == 0) {
                                     echo "not infected";
+                                } else {
+                                    echo "infected";
                                 }; ?> </td>
                     </tr>
                 <?php } ?>

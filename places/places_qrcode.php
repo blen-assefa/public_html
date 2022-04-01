@@ -65,7 +65,7 @@ else {
                 <!-- <a href=""><button type="button" id="button1" onclick="generateQR()"> Get QR </button></a> -->
                 <input type="submit" id="button1" onclick="generateQR()" value="Get QR">
 
-                <div id="qrcode">
+                <div style="display: flex;justify-content:center" id="qrcode">
                     <script type="text/javascript" src="qr_generator.js"></script>
                 </div>
             </div>

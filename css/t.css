@@ -158,6 +158,10 @@
     background: transparent;
 }
 
+#qrcode{
+    display: flex;
+    justify-content: center;
+}
 
 input[type=submit]{
     width: 85%;
