@@ -110,6 +110,7 @@ You will also need a MYSQL database for this project. To create one:
     $ python ./tests/test.py
 
 ### for connecting to Jacobs VPN:
+
 follow the link: 
 https://vpnasa.jacobs-university.de/
 or 
