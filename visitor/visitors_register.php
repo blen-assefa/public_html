@@ -2,11 +2,12 @@
 <html>
 
 <head>
+    <title>Corona Archive - Visitor Register</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive </title>
     <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
   <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
-    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="../css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,18 +22,18 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    include("connect.php");
+    include("../connect.php");
     ?>
 
     <div class="hero">
-        <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
-        <a href="register.php" class="back"><button class="back-btn"> Go back </button></a>
+        <a href="../index.php" class="back"><button class="back-btn"> Home </button></a>
+        <a href="../register.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box">
             <div class="hp-text">
-                <h2>Registration Form</h2>
+                <h2>Visitor Registration Form</h2>
             </div>
             <div class="logo-hp">
-                <img src="./images/av.jpg">
+                <img src="../images/av.jpg">
             </div>
             <form id="formID" action="visitors_register.php" method="post" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Full Name">
@@ -41,7 +42,7 @@
                 <input type="text" name="email" class="input-field" placeholder="Email">
                 <input type="password" name="password" class="input-field" placeholder="Password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
-                <input type="submit" name="signup">
+                <input type="submit" name="signup" value="Register">
             </form>
         </div>
     </div>
@@ -92,8 +93,14 @@
             $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, visitor_password, infected) VALUES ('$name', '$address', '$phone', '$email', '$password', 0)";
             if (mysqli_query($conn, $sql)) {
                 echo "Now you can Log In to scan the QR!";
-                // header("Location:visitors_camera.php");
-                header("Location:visitor_login.php");
+    ?>
+
+    <?php
+                session_start();
+                $_SESSION['vuser'] = $email;
+                header("Location:visitors_camera.php");
+
+                // header("Location:visitor_login.php");
             } else {
                 echo 'Device ID detected in database';
                 // header("Location:visitors_camera.php");

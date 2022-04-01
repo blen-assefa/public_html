@@ -7,11 +7,11 @@ if (!isset($_SESSION['vuser'])) {
     <html>
 
     <head>
-        <title>Instascan</title>
+        <title>Corona Archive - Scan QR</title>
         <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
-        <link rel="stylesheet" href="t.css">
+        <link rel="stylesheet" href="../css/t.css">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

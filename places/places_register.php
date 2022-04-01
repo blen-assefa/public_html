@@ -2,11 +2,12 @@
 <html>
 
 <head>
+    <title>Corona Archive - Places Register</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive </title>
     <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
   <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
-    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="../css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,18 +23,18 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    include("connect.php");
+    include("../connect.php");
     ?>
 
     <div class="hero">
-        <a href="index.php" class="back"><button class="back-btn"> Home </button></a>
-        <a href="register.php" class="back"><button class="back-btn"> Go back </button></a>
+        <a href="../index.php" class="back"><button class="back-btn"> Home </button></a>
+        <a href="../register.php" class="back"><button class="back-btn"> Go back </button></a>
         <div class="form-box-pr">
             <div class="hp-text">
-                <h2>Registration Form</h2>
+                <h2>Places Registration Form</h2>
             </div>
             <div class="logo-hp">
-                <img src="./images/pl.jpg">
+                <img src="../images/pl.jpg">
             </div>
             <form action="places_register.php" method="post" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Full Name">
@@ -41,7 +42,7 @@
                 <input type="text" name="email" class="input-field" placeholder="Email">
                 <input type="password" name="password" class="input-field" placeholder="password">
                 <input type="hidden" name="deviceID" id="deviceID" value="">
-                <input type="submit" name="signup">
+                <input type="submit" name="signup" value="Register">
             </form>
         </div>
     </div>
@@ -55,9 +56,9 @@
 
         if ($name == '' || $address == '' || $password == '') {
             echo 'Information cannot be empty';
-        // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
-        //     echo 'Invalid name';
-        //     error_log("Invalid name", 0);
+            // } elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) { // Name Constraint
+            //     echo 'Invalid name';
+            //     error_log("Invalid name", 0);
         } elseif (!preg_match('/^[\w\.]+@\w+\.\w+$/i', $email)) { // Email Constraint
             echo 'Invalid email';
             error_log("Invalid email", 0);
@@ -66,9 +67,9 @@
             // Insert into database
             $sql = "INSERT INTO Places (place_name, place_address, place_email, place_password) VALUES ('$name', '$address', '$email', '$password')";
             if (mysqli_query($conn, $sql)) {
-?>
- <!-- starting session to generate qr -->
-                <?php
+    ?>
+                <!-- starting session to generate qr -->
+    <?php
                 session_start();
                 $_SESSION['puser'] = $email;
 

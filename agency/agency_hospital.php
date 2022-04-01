@@ -7,8 +7,9 @@
 
 <html>
 <head>
+<title>Corona Archive - Hospital List</title>
 <meta name = "viewport", content="width = device-width, initial-scale=1">
-<link rel = "stylesheet" href = "table.css">
+<link rel = "stylesheet" href = "../css/table.css">
 </head>
 
 <body> 
@@ -16,7 +17,7 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    include("connect.php");
+    include("../connect.php");
     
     $result = mysqli_query($conn, "SELECT * FROM Hospital");
     ?>

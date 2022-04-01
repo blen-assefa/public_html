@@ -6,8 +6,8 @@
     <title> Corona Archive </title>
     <!-- <p style = "font-family:georgia,garamond,serif;font-size:70px;">
   <b> WELCOME TO THE UEFA CHAMPIONS LEAGUE INFO PAGE!</b> </p> -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/t.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
