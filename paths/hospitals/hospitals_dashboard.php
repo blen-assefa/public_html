@@ -21,13 +21,14 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" /> <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <title>Contact Us</title>
 </head>
 
 <body>
@@ -52,7 +53,7 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
         <div class="row">
 
             <div class="col-12">
-                <h3>Generate your QR Code</h3>
+                <h3>Citizen List</h3>
                 <hr>
             </div>
         </div>
@@ -60,54 +61,70 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 
 
         <div class="row row-content my-5">
+            <br>
+
             <!-- connecting to the database  -->
             <?php
-
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
-            require_once "../auth/config.php";
-
-            $email = $_SESSION['huser'];
-
+            include("../auth/config.php");
+            if (isset($_POST['checkboxes'])) {
+                $checkboxes = $_POST['checkboxes'];
+                $resettable = "UPDATE Visitor SET infected=0";
+                if (!mysqli_query($conn, $resettable)) {
+                    echo "Error updating the database";
+                }
+                foreach ($checkboxes as $user) {
+                    $markinfected = "UPDATE Visitor SET infected=1 WHERE visitor_id='$user'";
+                    if (!mysqli_query($conn, $markinfected)) {
+                        echo "Error marking users infected";
+                    }
+                }
+            }
             // getting data from the database 
-            $result = mysqli_query($link, "SELECT * FROM Visitor");
+            $result = mysqli_query($conn, "SELECT * FROM Visitor");
             ?>
 
             <!-- showing the data from the database in the form of tables  -->
-            <table id="entity_table">
-                <tr>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Infected</th>
-                </tr>
-                <?php while ($array = mysqli_fetch_assoc($result)) { ?>
+            <form action="hospital_dashboard.php" method="post" id="tableform">
+                <table id="entity_table">
                     <tr>
-                        <td> <?php echo $array["visitor_name"]; ?> </td>
-                        <td> <?php echo $array["visitor_address"]; ?> </td>
-                        <td> <?php echo $array["visitor_phone"]; ?> </td>
-                        <td> <?php echo $array["visitor_email"]; ?> </td>
-                        <td> <?php if ($array["infected"] == 0) {
-                                    echo "not infected";
-                                ?>
-                                <button type="button" onclick="">Mark Infected</button>
-                                <?php
-                                    $array["infected"] == 0;
-                                ?>
-                            <?php
-                                } else {
-                                    echo "infected";
-                            ?>
-                                <button type="button">Mark Not Infected</button>
-                            <?php
-                                }; ?>
-                        </td>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Mark Infected
+                        <th>
                     </tr>
-                <?php } ?>
-
-            </table>
+                    <?php while ($array = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td> <?php echo $array["visitor_name"]; ?> </td>
+                            <td> <?php echo $array["visitor_address"]; ?> </td>
+                            <td> <?php echo $array["visitor_phone"]; ?> </td>
+                            <td> <?php echo $array["visitor_email"]; ?> </td>
+                            <td> <?php
+                                    if ($array["infected"] == 0) {
+                                    ?>
+                                    <input type="checkbox" name="checkboxes[]" value="<?php echo $array["visitor_id"] ?>">
+                                <?php
+                                    } else {
+                                ?>
+                                    <input type="checkbox" name="checkboxes[]" value="<?php echo $array["visitor_id"] ?>" checked>
+                                <?php
+                                    }
+                                ?>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </table>
+                <input type="submit">
+            </form>
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function() {
+                    window.location.href = "userupdated.php";
+                };
+            </script>
         </div>
 
     </div>

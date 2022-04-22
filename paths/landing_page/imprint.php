@@ -53,6 +53,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <h3>This website in general can be considered as Covid Management System. This Project was created on sprint basis.</h3><br>
         <p><u> Sprint-03 </u> By:<br>1.
             Blen Assefa <br>
+            2.
+            Matias Merko <br>
         <p>
             Copyright &copy JUB
             <script>

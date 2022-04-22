@@ -27,13 +27,13 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
- <title>Contact Us</title>
+    <title>Contact Us</title>
 </head>
 
 <body>
     <?php
     $current_page = "contact";
-  include "../layout/header.php";
+    include "../layout/header.php";
     ?>
 
     <header class="jumbotron">
@@ -42,8 +42,8 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 
                 <div class="col-12 col-sm-8">
                     <h2>The Best Web Service for Corona Infections.</h2>
-          <h5>This web app was created as a project of Software Engineering Module of Jacobs University Bremen.</h5>
-        
+                    <h5>This web app was created as a project of Software Engineering Module of Jacobs University Bremen.</h5>
+
                 </div>
             </div>
         </div>
@@ -52,32 +52,34 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <div class="container">
 
 
-            <div class="title">
-                 
-        <div class="row marketing my-5">
-      <div class="col-lg-6">
-        
-      <a href="/~bassefa/paths/agency/agency_add_hospital.php "><button type="button" class="back">Add Hospitals</button></a>
-               
+        <div class="title">
 
-      <a href="/~bassefa/paths/agency/agency_visitor.php"><button type="button" class="back">View Visitors</button></a>
-               
-      </div>
+            <div class="row marketing my-5">
+                <div class="col-lg-6">
 
-      <div class="col-lg-6">
-      <a href="/~bassefa/paths/agency/agency_places.php"><button type="button" class="back">View Places</button></a>
-               
-
-      <a href="/~bassefa/paths/agency/agency_hospital.php"><button type="button" class="back">View Hospitals</button></a>
+                    <a href="/~bassefa/paths/agency/agency_add_hospital.php "><button type="button" class="back">Add Hospitals</button></a>
 
 
-      </div>
+                    <a href="/~bassefa/paths/agency/agency_visitor.php"><button type="button" class="back">View Visitors</button></a>
+                    
+                    <a href="/~bassefa/paths/agency/agency_visited_places.php"><button type="button" class="back">View Visited Places</button></a>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <a href="/~bassefa/paths/agency/agency_places.php"><button type="button" class="back">View Places</button></a>
+
+
+                    <a href="/~bassefa/paths/agency/agency_hospital.php"><button type="button" class="back">View Hospitals</button></a>
+
+                </div>
+
+            </div>
+        </div>
     </div>
-    </div>
-  </div>
 
     <?php
-   include  "../layout/footer.php";
+    include  "../layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
