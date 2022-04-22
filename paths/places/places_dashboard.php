@@ -193,7 +193,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php
     $current_page = "contact";
-    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/header.php";
+    include "../layout/header.php";
     ?>
 
     <header class="jumbotron">
@@ -336,7 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <?php
-    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/footer.php";
+   include  "../paths/layout/footer.php";
     
     // Close connection
     mysqli_close($link);

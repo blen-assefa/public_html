@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php
     $current_page = "login";
-    include $_SERVER['DOCUMENT_ROOT'] . '/paths/layout/header.php';
+    include "../layout/header.php";
     ?>
 
     <div class="container d-flex justify-content-center">

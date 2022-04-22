@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item  px-2">
-                <a class="nav-link <?php echo ($current_page === 'index') ? 'active' : ''; ?>" href="/index.php">Home</a>
+                <a class="nav-link <?php echo ($current_page === 'index') ? 'active' : ''; ?>" href="/~bassefa/index.php">Home</a>
             </li>
            
             <li class="nav-item px-2">

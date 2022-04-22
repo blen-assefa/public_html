@@ -25,7 +25,7 @@
 <body>
 <?php
     $current_page = "login";
-    include "/~bassefa/paths/layout/header.php";
+    include "../layout/header.php";
     ?>
 <div class="container-fluid">
   
@@ -41,7 +41,7 @@
   </div>
 
   <?php
-      include "/~bassefa/paths/layout/footer.php";
+    include  "../paths/layout/footer.php";
     ?>
      <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

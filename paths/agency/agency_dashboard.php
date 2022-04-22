@@ -33,7 +33,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <body>
     <?php
     $current_page = "contact";
-    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/header.php";
+  include "../layout/header.php";
     ?>
 
     <header class="jumbotron">
@@ -77,7 +77,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
   </div>
 
     <?php
-    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/footer.php";
+   include  "../paths/layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
