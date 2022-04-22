@@ -31,7 +31,7 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            $result = mysqli_query($conn, "SELECT agent_username, agent_password FROM Agent WHERE agent_username = '$username' AND agent_password = '$password'");
+            $result = mysqli_query($link, "SELECT agent_username, agent_password FROM Agent WHERE agent_username = '$username' AND agent_password = '$password'");
 
             $array = mysqli_fetch_assoc($result);
 

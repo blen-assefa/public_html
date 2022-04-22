@@ -87,7 +87,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
                 $exitdate = $_POST['exitdate'];
                 $result .= "WHERE place='$placename' AND entry_date>='$entrydate' AND exit_date<='$exitdate'";
             }
-            $query = mysqli_query($conn, $result);
+            $query = mysqli_query($link, $result);
             ?>
 
             <ul>

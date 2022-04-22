@@ -72,18 +72,18 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
             if (isset($_POST['checkboxes'])) {
                 $checkboxes = $_POST['checkboxes'];
                 $resettable = "UPDATE Visitor SET infected=0";
-                if (!mysqli_query($conn, $resettable)) {
+                if (!mysqli_query($link, $resettable)) {
                     echo "Error updating the database";
                 }
                 foreach ($checkboxes as $user) {
                     $markinfected = "UPDATE Visitor SET infected=1 WHERE visitor_id='$user'";
-                    if (!mysqli_query($conn, $markinfected)) {
+                    if (!mysqli_query($link, $markinfected)) {
                         echo "Error marking users infected";
                     }
                 }
             }
             // getting data from the database 
-            $result = mysqli_query($conn, "SELECT * FROM Visitor");
+            $result = mysqli_query($link, "SELECT * FROM Visitor");
             ?>
 
             <!-- showing the data from the database in the form of tables  -->

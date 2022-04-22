@@ -68,7 +68,7 @@
 
         // Insert into database
         $sql = "INSERT INTO Visitor (visitor_name, visitor_address, visitor_phone, visitor_email, device_ID, infected) VALUES ('$name', '$address', '$phone', '$email', '$deviceID', 0)";
-        if (mysqli_query($conn, $sql)){
+        if (mysqli_query($link, $sql)){
             echo "Registration successful";
         } else {
             echo "Registration failed";

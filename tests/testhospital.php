@@ -31,7 +31,7 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $result = mysqli_query($conn, "SELECT hospital_username, hospital_password FROM Hospital WHERE hospital_username = '$username' AND hospital_password = '$password'");
+    $result = mysqli_query($link, "SELECT hospital_username, hospital_password FROM Hospital WHERE hospital_username = '$username' AND hospital_password = '$password'");
 
     $array = mysqli_fetch_assoc($result);
 

@@ -38,7 +38,7 @@
 
         // Insert into database
         $sql = "INSERT INTO Places (place_name, place_address) VALUES ('$name', '$address')";
-        if (mysqli_query($conn, $sql)){
+        if (mysqli_query($link, $sql)){
             echo "Registration successful";
         } else {
             echo "Registration failed";
