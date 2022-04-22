@@ -19,10 +19,10 @@ if (!isset($_SESSION["vuser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
@@ -34,7 +34,7 @@ if (!isset($_SESSION["vuser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <body>
     <?php
     $current_page = "contact";
-    include  $_SERVER['DOCUMENT_ROOT']."/paths/layout/header.php";
+    include  $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/header.php";
     ?>
 
     <header class="jumbotron">
@@ -93,7 +93,7 @@ if (!isset($_SESSION["vuser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     </div>
 
     <?php
-    include  $_SERVER['DOCUMENT_ROOT']."/paths/layout/footer.php";
+    include  $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

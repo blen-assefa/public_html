@@ -80,7 +80,7 @@ INSERT INTO Agent (agent_id, agent_username, agent_password)
 VALUES (1, 'agent1', 'agent_password');
 
 INSERT INTO EventsForPlaces (event_id, agent_username, agent_password)
-VALUES (1, 'agent1', 'agent_password');
+VALUES (1, 'agent2', 'agent_password');
 
 
 INSERT INTO Hospital (hospital_id, hospital_username, hospital_address, hospital_password)

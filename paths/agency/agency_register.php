@@ -118,9 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
     <style>
@@ -138,7 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php
     $current_page = "register";
-    include $_SERVER['DOCUMENT_ROOT']."/paths/layout/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/header.php";
     ?>
 
     <div class="container d-flex justify-content-center">
@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     </div>
     <?php
-    include $_SERVER['DOCUMENT_ROOT']."/paths/layout/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
     ?>
 
     

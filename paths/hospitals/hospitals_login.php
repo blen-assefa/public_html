@@ -103,9 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label>Password</label>
                         <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <small id="loginHelp" class="form-text text-muted float-right"><a href="/paths/auth/forgot-password.php">Forgot password</a></small>
+                        <small id="loginHelp" class="form-text text-muted float-right"><a href="/~bassefa/paths/auth/forgot-password.php">Forgot password</a></small>
 
                     </div>
 
@@ -162,7 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
     <?php
-     include $_SERVER['DOCUMENT_ROOT']."/paths/layout/footer.php";
+     include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
     ?>
 
 

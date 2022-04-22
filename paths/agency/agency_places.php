@@ -16,10 +16,10 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <title>Corona Archive - Places List</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -39,7 +39,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     ?>
     <?php
     $current_page = "contact";
-    include  $_SERVER['DOCUMENT_ROOT'] . "/paths/layout/header.php";
+    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/header.php";
     ?>
 
     <header class="jumbotron">
@@ -58,7 +58,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <div class="container">
         <div class="row">
             <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="/paths/agency/agency_dashboard.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="/~bassefa/paths/agency/agency_dashboard.php">Home</a></li>
                 <li class="breadcrumb-item active">View Places</li>
             </ol>
             <div class="col-12">
@@ -89,7 +89,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     </div>
 
     <?php
-    include  $_SERVER['DOCUMENT_ROOT'] . "/paths/layout/footer.php";
+    include  $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/paths/layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

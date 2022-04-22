@@ -136,9 +136,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -157,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php
     $current_page = "register";
-    include $_SERVER['DOCUMENT_ROOT']."/paths/layout/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/header.php";
     ?>
 
     <div class="container  d-flex justify-content-center">
@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <input type="reset" class="btn btn-secondary ml-2" value="Reset">
                     </div>
-                    <h9>Already have an account? <a href="/paths/visitors/visitor_login.php">Login here</a>.</h9>
+                    <h9>Already have an account? <a href="/~bassefa/paths/visitors/visitor_login.php">Login here</a>.</h9>
                 </form>
 
             </div>
@@ -208,7 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     </div>
     <?php
-    include $_SERVER['DOCUMENT_ROOT']."/paths/layout/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
     ?>
 
     
