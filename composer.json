@@ -4,7 +4,13 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app"
+            "App\\": "classes",
+            "Config\\": "config"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\": "tests"
         }
     }
 }

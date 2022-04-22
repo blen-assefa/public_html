@@ -87,7 +87,7 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
             ?>
 
             <!-- showing the data from the database in the form of tables  -->
-            <form action="hospital_dashboard.php" method="post" id="tableform">
+            <form action="hospitals_dashboard.php" method="post" id="tableform">
                 <table id="entity_table">
                     <tr>
                         <th>Name</th>

@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Visitors Login</title>
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
