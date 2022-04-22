@@ -85,7 +85,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
                 // Insert into database
                 $sql = "INSERT INTO Hospital (hospital_username, hospital_address, hospital_password) VALUES ('$username', '$address', '$password')";
                 if (mysqli_query($link, $sql)) {
-                    header("Location:agency.php");
+                    header("Location: /~bassefa/paths/agency/agency_add_hospital.php");
                     echo 'Hospital Added Successfully !';
                 } else {
                     echo 'Failed to register';

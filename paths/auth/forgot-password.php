@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 
-header("location: /index.php");
+header("location: /~bassefa/index.php");
     exit;
 
 ?>
