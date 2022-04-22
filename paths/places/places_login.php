@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <?php
     $current_page = "login";
-    include $_SERVER['DOCUMENT_ROOT'].'/paths/layout/header.php';
+    include '/paths/layout/header.php';
     ?>
 
     <div class="container d-flex justify-content-center">
@@ -162,7 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
     <?php
-    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
+    include "/~bassefa/paths/layout/footer.php";
     ?>
 
 

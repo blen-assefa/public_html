@@ -25,7 +25,7 @@
 <body>
 <?php
     $current_page = "register";
-    include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/header.php";
+    include "/~bassefa/paths/layout/header.php";
     ?>
 <div class="container-fluid">
   
@@ -39,7 +39,7 @@
   </div>
 
   <?php
-      include $_SERVER['DOCUMENT_ROOT']."/~bassefa/paths/layout/footer.php";
+      include "/~bassefa/paths/layout/footer.php";
     ?>
      <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
