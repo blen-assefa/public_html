@@ -74,10 +74,6 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 
             <!-- connecting to the database  -->
             <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-            include("../auth/config.php");
 
             // getting data from the database 
             $result = "SELECT * FROM VisitorToPlaces ";
@@ -89,10 +85,6 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
             }
             $query = mysqli_query($link, $result);
             ?>
-
-            <ul>
-                <button class="button"><a href="agency.php" class="back"> Go back </a> </button>
-            </ul>
 
             <form method="POST">
                 <input type="text" id="searchuser" name="placename" placeholder="Enter Place" required>
