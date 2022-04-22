@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["visitor_id"] = $param_visitor_id;
 
                 // Redirect user to welcome page
-                header("location: /~bassefa/path/visitors/visitors_camera.php");
+                header("location: /~bassefa/paths/visitors/visitors_camera.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";

@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["huser"]) && isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: /~bassefa/path/agency/agency_dashboard.php");
+    header("location: /~bassefa/paths/agency/agency_dashboard.php");
     exit;
 }
 
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['auser'] = $agent_username;
 
                             // Redirect user to welcome page
-                            header("location: /~bassefa/path/agency/agency_dashboard.php");
+                            header("location: /~bassefa/paths/agency/agency_dashboard.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid Password or Username";

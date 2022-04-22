@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["hospital_id"] = $param_hospital_id;
 
                 // Redirect user to welcome page
-                header("location: /~bassefa/path/hospitals/hospitals_dashboard.php");
+                header("location: /~bassefa/paths/hospitals/hospitals_dashboard.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";
