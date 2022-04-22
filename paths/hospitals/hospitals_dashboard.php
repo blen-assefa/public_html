@@ -113,7 +113,7 @@ if (!isset($_SESSION["huser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     </div>
 
     <?php
-    include  "../paths/layout/footer.php";
+    include  "../layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

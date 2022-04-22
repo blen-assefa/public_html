@@ -155,7 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
     <?php
-  include  "../paths/layout/footer.php";
+  include  "../layout/footer.php";
     ?>
 
 
