@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['vuser'] = $visitor_email;
 
                             // Redirect user to welcome page
-                            header("location: /paths/visitors/visitors_camera.php");
+                            header("location: /~bassefa/path/visitors/visitors_camera.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid Password or Email";

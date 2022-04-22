@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["place_id"] = $param_place_id;
 
                 // Redirect user to welcome page
-                header("location: /paths/places/places_dashboard.php");
+                header("location: /~bassefa/path/places/places_dashboard.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";

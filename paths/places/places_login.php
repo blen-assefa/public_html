@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["puser"]) && isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: /paths/places/places_dashboard.php");
+    header("location: /~bassefa/path/places/places_dashboard.php");
     exit;
 }
 
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['puser'] = $place_email;
 
                             // Redirect user to welcome page
-                            header("location: /paths/places/places_dashboard.php");
+                            header("location: /~bassefa/path/places/places_dashboard.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid Password or Email";

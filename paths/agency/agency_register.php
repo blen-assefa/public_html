@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["agent_id"] = $param_agent_id;
 
                 // Redirect user to welcome page
-                header("location: /paths/agency/agency_dashboard.php");
+                header("location: /~bassefa/path/agency/agency_dashboard.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";

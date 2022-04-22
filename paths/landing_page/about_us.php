@@ -59,7 +59,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <div class="row marketing my-5">
           <div class="col-lg-6">
             <h4>Member 1</h4>
-            <p>blassefa at jacobs-university.de</p>
+            <p>Blen Assefa</p>
+            <h4>Member 2</h4>
+            <p>Matias Merko</p>
 
 
           </div>
