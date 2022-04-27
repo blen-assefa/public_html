@@ -45,7 +45,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <body>
   <?php
   $current_page = "index";
-  include "paths/layout/header.php";
+  include "/paths/layout/header.php";
   ?>
 
   <div class="container-fluid">
@@ -63,7 +63,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   </div>
   </header>
   <?php
-  include "paths/layout/footer.php";
+  include "/paths/layout/footer.php";
   ?>
   </div>
 
