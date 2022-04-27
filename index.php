@@ -45,7 +45,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 <body>
   <?php
   $current_page = "index";
-  include "/~bassefa/paths/layout/header.php";
+  include "paths/layout/header.php";
   ?>
 
   <div class="container-fluid">
@@ -57,13 +57,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <p>Get all the information you need about the places <br>
         you have entered, displaying, evaluating and <br>
         archiving the Corona infections in a particular location.</p>
-      <br><a href="/~bassefa/paths/landing_page/imprint.php" class="design">Imprint</a>
-      <a href="/~bassefa/paths/landing_page/about_us.php" class="design">Learn More</a>
+      <br><a href="paths/landing_page/imprint.php" class="design">Imprint</a>
+      <a href="paths/landing_page/about_us.php" class="design">Learn More</a>
     </div>
   </div>
   </header>
   <?php
-  include "/~bassefa/paths/layout/footer.php";
+  include "paths/layout/footer.php";
   ?>
   </div>
 
