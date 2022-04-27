@@ -5,7 +5,7 @@ from requests.structures import CaseInsensitiveDict
 
 
 class CoronArchiveTestCase(unittest.TestCase):
-    API_URL = "http://clabsql.clamv.jacobs-university.de/~bassefa/"
+    API_URL = "http://clabsql.clamv.jacobs-university.de./"
 
     def test_home_page(self):
         response = requests.get(self.API_URL)

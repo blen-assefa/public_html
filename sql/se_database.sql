@@ -33,15 +33,16 @@ CREATE TABLE Hospital (
 
 CREATE TABLE VisitorToPlaces (
     visit_id INT PRIMARY KEY AUTO_INCREMENT,
-    QRcode CHAR(30) NOT NULL,
+    place_id INT NOT NULL,
     device_ID CHAR(30) NOT NULL,
     entry_date DATE,
     entry_time TIME,
     exit_date DATE,
     exit_time TIME,
-    FOREIGN KEY(QRcode) REFERENCES Places(QRcode) ON DELETE CASCADE,
+    FOREIGN KEY(place_id) REFERENCES Places(place_id) ON DELETE CASCADE,
     FOREIGN KEY(device_ID) REFERENCES Visitor(device_ID) ON DELETE CASCADE
 );
+
 CREATE TABLE `Images` (
   `image_id` int(11) NOT NULL AUTO_INCREMENT,
   `image` longblob NOT NULL,

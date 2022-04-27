@@ -88,18 +88,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($email_err) && empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
 
         // Prepare an insert statement
-        $sql = "INSERT INTO Visitor(visitor_id, visitor_name, visitor_address, visitor_phone, visitor_email, visitor_password, infected) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Visitor(visitor_id, visitor_name, visitor_address, visitor_phone, visitor_email, visitor_password,device_ID,  infected) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
             $param_visitor_id = generateKey($link);
-            mysqli_stmt_bind_param($stmt, "dsssssd", $param_visitor_id, $param_username, $param_address, $param_phone, $param_email, $param_password, $param_infected);
+            mysqli_stmt_bind_param($stmt, "dssssssd", $param_visitor_id, $param_username, $param_address, $param_phone, $param_email, $param_password, $param_device, $param_infected);
 
             // Set parameters
             $param_username = $username;
             $param_email = $email;
             $param_address = $address;
             $param_phone = $phone_number;
+            $param_device = "Test";
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             $param_infected = 0;
 
@@ -114,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["visitor_id"] = $param_visitor_id;
 
                 // Redirect user to welcome page
-                header("location: /~bassefa/paths/visitors/visitors_camera.php");
+                header("location: /paths/visitors/visitors_camera.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";
@@ -136,9 +137,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -200,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <input type="reset" class="btn btn-secondary ml-2" value="Reset">
                     </div>
-                    <h9>Already have an account? <a href="/~bassefa/paths/visitors/visitor_login.php">Login here</a>.</h9>
+                    <h9>Already have an account? <a href="/paths/visitors/visitor_login.php">Login here</a>.</h9>
                 </form>
 
             </div>

@@ -16,10 +16,10 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <title>Corona Archive - Places List</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
-    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -35,7 +35,12 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     require_once "../auth/config.php";
 
     // getting data from the database 
-    $result = mysqli_query($link, "SELECT * FROM Places");
+    $result = "SELECT * FROM Places";
+    if (isset($_POST['submitbtn'])) {
+        $placename = $_POST['searchplace'];
+        $result .= " WHERE place_name='$placename'";
+    }
+    $query = mysqli_query($link, $result);
     ?>
     <?php
     $current_page = "contact";
@@ -48,7 +53,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 
                 <div class="col-12 col-sm-8">
                     <h2>Corona Archive
-        </h2>
+                    </h2>
                     <h5>This web app was created as a project of Software Engineering Module of Jacobs University Bremen.</h5>
                 </div>
             </div>
@@ -58,7 +63,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <div class="container">
         <div class="row">
             <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="/~bassefa/paths/agency/agency_dashboard.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="/paths/agency/agency_dashboard.php">Home</a></li>
                 <li class="breadcrumb-item active">View Places</li>
             </ol>
             <div class="col-12">
@@ -66,6 +71,19 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
                 <hr>
             </div>
         </div>
+        <form method="POST">
+            <div class="row row-content">
+                <div class="col-6">
+                    <input type="text" id="searchuser" name="searchplace" placeholder="Search by name">
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Search" id="searchinput" name="submitbtn">
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Reset Table" id="searchinput" name="resetbtn">
+                </div>
+            </div>
+        </form>
 
 
 
@@ -76,7 +94,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
                     <th>Place</th>
                     <th>Address</th>
                 </tr>
-                <?php while ($array = mysqli_fetch_assoc($result)) { ?>
+                <?php while ($array = mysqli_fetch_array($query)) { ?>
                     <tr>
                         <td> <?php echo $array["place_name"]; ?> </td>
                         <td> <?php echo $array["place_address"]; ?> </td>
@@ -89,7 +107,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     </div>
 
     <?php
-   include  "../layout/footer.php";
+    include  "../layout/footer.php";
     ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

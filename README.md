@@ -20,7 +20,7 @@
     - PHP
     - MySQL
  
-### Link to page hosted on ClamV: https://clabsql.clamv.jacobs-university.de/~bassefa/
+### Link to page hosted on ClamV: https://clabsql.clamv.jacobs-university.de./
 ### Link to page hosted on ClamV: https://clabsql.clamv.jacobs-university.de/~mmerko/
 
 ## Sprint 3 Additions
@@ -98,31 +98,31 @@
 
 ## File Structure
 
-   .
-    ├── assets                  # Images and such used for the websites
-    │   ├── css                 # CSS stylesheets
-    │   ├── fonts               # Fonts used
-    │   ├── img                 # Images folder
-    │   └── js                  # javascript ;)
-    ├── classes                 # for test purposes
-    ├── data                    # QR code generated is stored here
-    ├── lib                     # library for qr code generation for php
-    ├── paths                   # Source files
-    │   ├── agency              # Agency stuffs
-    │   ├── auth                # Authentications
-    │   ├── hospitals           # Hospital stuffs
-    │   ├── landing page        # Landing pages accessable for everyone
-    │   ├── layouts             # Header and footer layouts
-    │   ├── places              # Places stuffs
-    │   └── visitors            # Visitors stuffs
-    ├── sql                     # Folder for running sql queries
-    ├── tests                   # Tools and utilities for testing
-    ├── vendors                 # PHPUnit testing helper
-    ├── composer.lock           # PHPUnit testing helper
-    ├── composer.json.          # PHPUnit testing helper
-    ├── phpunit.xml             # PHPUnit testing helper
-    ├── index.php               # PHPUnit testing helper
-    └── README.md               # Starting point
+    .
+        ├── assets                  # Images and such used for the websites
+        │   ├── css                 # CSS stylesheets
+        │   ├── fonts               # Fonts used
+        │   ├── img                 # Images folder
+        │   └── js                  # javascript ;)
+        ├── classes                 # for test purposes
+        ├── data                    # QR code generated is stored here
+        ├── lib                     # library for qr code generation for php
+        ├── paths                   # Source files
+        │   ├── agency              # Agency stuffs
+        │   ├── auth                # Authentications
+        │   ├── hospitals           # Hospital stuffs
+        │   ├── landing page        # Landing pages accessable for everyone
+        │   ├── layouts             # Header and footer layouts
+        │   ├── places              # Places stuffs
+        │   └── visitors            # Visitors stuffs
+        ├── sql                     # Folder for running sql queries
+        ├── tests                   # Tools and utilities for testing
+        ├── vendors                 # PHPUnit testing helper
+        ├── composer.lock           # PHPUnit testing helper
+        ├── composer.json.          # PHPUnit testing helper
+        ├── phpunit.xml             # PHPUnit testing helper
+        ├── index.php               # PHPUnit testing helper
+        └── README.md               # Starting point
 
 ## Dummy Login Credentials (Sprint 2):
 

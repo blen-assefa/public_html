@@ -31,7 +31,7 @@ class Conection
         try {
             //! conectar a la BD
             // 'mysql:host=localhost;dbname=nombreDB','root',''
-            $conn = new \PDO(
+            $link = new \PDO(
                 self::$dsn . ":host=" . self::$host . ";dbname=" . self::$db,
                 self::$user, 
                 self::$pass
@@ -39,9 +39,9 @@ class Conection
 
             //* control de errores
             // muestra los errores comunes y las advertencias
-            $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            $link->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             //* devolver la conexion
-            return $conn;
+            return $link;
         // capturar error  
         } catch (\PDOException $exception) {
             exit($exception->getMessage());

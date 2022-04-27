@@ -21,9 +21,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
   <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -57,8 +57,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       <p>Get all the information you need about the places <br>
         you have entered, displaying, evaluating and <br>
         archiving the Corona infections in a particular location.</p>
-      <br><a href="/~bassefa/paths/landing_page/imprint.php" class="design">Imprint</a>
-      <a href="/~bassefa/paths/landing_page/about_us.php" class="design">Learn More</a>
+      <br><a href="/paths/landing_page/imprint.php" class="design">Imprint</a>
+      <a href="/paths/landing_page/about_us.php" class="design">Learn More</a>
     </div>
   </div>
   </header>

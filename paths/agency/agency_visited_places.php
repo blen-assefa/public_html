@@ -17,10 +17,10 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <title>Corona Archive - Places List</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
-    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -35,8 +35,19 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     error_reporting(E_ALL);
     require_once "../auth/config.php";
 
-    // getting data from the database 
-    $result = mysqli_query($link, "SELECT * FROM Places");
+    $result = "SELECT * FROM VisitorToPlaces ";
+    if (isset($_POST['submitbtn'])) {
+        $placename = $_POST['placename'];
+        $entrydate = $_POST['entrydate'];
+        $exitdate = $_POST['exitdate'];
+        $result .= "WHERE place_id='$placename' AND entry_date>='$entrydate' AND exit_date<='$exitdate'";
+    }
+    $query = mysqli_query($link, $result);
+
+
+
+
+
     ?>
     <?php
     $current_page = "contact";
@@ -59,7 +70,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <div class="container">
         <div class="row">
             <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="/~bassefa/paths/agency/agency_dashboard.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="/paths/agency/agency_dashboard.php">Home</a></li>
                 <li class="breadcrumb-item active">View Places</li>
             </ol>
             <div class="col-12">
@@ -67,43 +78,40 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
                 <hr>
             </div>
         </div>
+        <form method="POST">
+            <div class="row row-content">
+                <div class="col-4">
+                    <input type="text" id="searchuser" name="placename" placeholder="Enter Place" required>
+                </div>
+                <div class="col-3">
+                    <input type="text" id="searchuser" name="entrydate" placeholder="Enter Entry Time" required>
+                </div>
+                <div class="col-3">
+                    <input type="text" id="searchuser" name="exitdate" placeholder="Enter Exit Time" required>
+                </div>
+                <div class="col-2">
+                    <input type="submit" value="Search" id="searchinput" name="submitbtn">
+                </div>
+            </div>
+        </form>
 
 
 
         <div class="row row-content my-5">
 
-            <!-- connecting to the database  -->
-            <?php
 
-            // getting data from the database 
-            $result = "SELECT * FROM VisitorToPlaces ";
-            if (isset($_POST['submitbtn'])) {
-                $placename = $_POST['placename'];
-                $entrydate = $_POST['entrydate'];
-                $exitdate = $_POST['exitdate'];
-                $result .= "WHERE place='$placename' AND entry_date>='$entrydate' AND exit_date<='$exitdate'";
-            }
-            $query = mysqli_query($link, $result);
-            ?>
-
-            <form method="POST">
-                <input type="text" id="searchuser" name="placename" placeholder="Enter Place" required>
-                <input type="text" id="searchuser" name="entrydate" placeholder="Enter Entry Time" required>
-                <input type="text" id="searchuser" name="exitdate" placeholder="Enter Exit Time" required>
-                <input type="submit" value="Search" id="searchinput" name="submitbtn">
-            </form>
             <!-- displaying the data from the database in the form of table  -->
             <table id="entity_table">
                 <tr>
-                    <th>Visitor</th>
+                    <th>Visitor ID</th>
                     <th>Address</th>
                     <th>Phone</th>
                     <th>Email</th>
                 </tr>
                 <?php while ($array = mysqli_fetch_array($query)) { ?>
                     <tr>
-                        <td> <?php echo $array["Visitor"]; ?> </td>
-                        <td> <?php echo $array["Place"]; ?> </td>
+                        <td> <?php echo $array["visit_id"]; ?> </td>
+                        <td> <?php echo $array["place_id"]; ?> </td>
                         <td> <?php echo $array["entry_date"]; ?> </td>
                         <td> <?php echo $array["exit_date"]; ?> </td>
                     </tr>

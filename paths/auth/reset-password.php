@@ -5,7 +5,7 @@ session_start();
 
 // Check if the user is logged in, otherwise redirect to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: /~bassefa/auth/login_portal.php");
+    header("location: ./auth/login_portal.php");
     exit;
 }
 
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: /~bassefa/auth/login_portal.php");
+                header("location: ./auth/login_portal.php");
                 exit();
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a class="btn btn-link ml-2" href="index.php">Cancel</a>
+                        <a class="btn btn-link ml-2" href="../../index.php">Cancel</a>
                     </div>
                 </form>
             </div>

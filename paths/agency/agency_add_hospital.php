@@ -9,6 +9,29 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     $status = "Logged In";
 }
 
+// Getting the data ready, from the form, to be inserted into the db
+if (isset($_POST['signup'])) {
+    $username = $_POST['name'];
+    $address = $_POST['address'];
+    $password = $_POST['password'];
+
+    // Checking the constraints for the data for the Hospitals
+    if ($username == '' || $address == '' || $password == '') {
+        echo 'Information cannot be empty';
+
+    } else {
+
+        // Insert into database
+        $sql = "INSERT INTO Hospital (hospital_username, hospital_address, hospital_password) VALUES ('$username', '$address', '$password')";
+        if (mysqli_query($conn, $sql)) {
+            header("Location:agency.php");
+            echo 'Hospital Added Successfully !';
+        } else {
+            echo 'Failed to register';
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +40,11 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
     <title> Corona Archive - Add Hospitals </title>
-    <link rel="stylesheet" href="/~bassefa/assets/css/t.css">
-    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/t.css">
+    <link rel="stylesheet" href="/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 </head>
@@ -44,7 +67,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <div class="container">
     <div class="row">
             <ol class="col-12 breadcrumb">
-                <li class="breadcrumb-item"><a href="/~bassefa/paths/agency/agency_dashboard.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="/paths/agency/agency_dashboard.php">Home</a></li>
                 <li class="breadcrumb-item active">Add Hospitals</li>
             </ol>
             <div class="col-12">
@@ -58,7 +81,7 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
         <div class="row row-content ">
             <div class="form-box-pr">
                 <div class="logo-hp">
-                    <img src="../images/pl.jpg">
+                    <img src="../../assets/img/pl.jpg">
                 </div>
                 <form action="agency_add_hospital.php" method="post" class="input-grp">
                     <input type="text" name="name" class="input-field" placeholder="Hospital Username">
@@ -70,30 +93,6 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
             </div>
         </div>
 
-        <?php
-        // Getting the data ready, from the form, to be inserted into the db
-        if (isset($_POST['signup'])) {
-            $username = $_POST['name'];
-            $address = $_POST['address'];
-            $password = $_POST['password'];
-
-            // Checking the constraints for the data for the Hospitals
-            if ($username == '' || $address == '' || $password == '') {
-                echo 'Information cannot be empty';
-            } else {
-
-                // Insert into database
-                $sql = "INSERT INTO Hospital (hospital_username, hospital_address, hospital_password) VALUES ('$username', '$address', '$password')";
-                if (mysqli_query($link, $sql)) {
-                    header("Location: /~bassefa/paths/agency/agency_add_hospital.php");
-                    echo 'Hospital Added Successfully !';
-                } else {
-                    echo 'Failed to register';
-                }
-            }
-        }
-
-        ?>
 
     </div>
 

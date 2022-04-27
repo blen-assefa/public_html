@@ -1,5 +1,14 @@
 <?php
+
+$status = "Not Logged In";
 session_start();
+
+if (!isset($_SESSION["puser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    $status = "Not Logged In";
+    header('Location: ./places_login.php');
+} else {
+    $status = "Logged In";
+}
 // Include config file
 require_once "../auth/config.php";
 
@@ -61,12 +70,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $event_date = date('Y-m-d', strtotime($_POST['event_date'])); 
     }
 
-    include($_SERVER['DOCUMENT_ROOT'] . '/lib/phpqrcode/qrlib.php');
+    include('../../lib/phpqrcode/qrlib.php');
     // how to save PNG codes to server
 
-    $tempDir = $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/data/";
+    $tempDir =  "../../data/";
 
-    $codeContents = $event_name . '+' .  $event_date;
+    $codeContents = $event_name . '+' .  $event_date . "/". $a ;
 
 
     // we need to generate filename somehow, 
@@ -74,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fileName = '005_' . md5($codeContents) . '.png';
 
     $pngAbsoluteFilePath = $tempDir . $fileName;
-    $urlRelativeFilePath = $_SERVER['DOCUMENT_ROOT'] . "/~bassefa/data/" . $fileName;
+    $urlRelativeFilePath = $tempDir . $fileName;
 
     // generating
     if (!file_exists($pngAbsoluteFilePath)) {
@@ -154,15 +163,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Attempt to execute th e prepared statement
         if (mysqli_stmt_execute($stmt)) {
             //echo "Successfully added Event!";
+            
         } else {
 
             //echo "Oops! Something went wrong. Please try again later. Insert query error in events";
-             echo ('Error with execute: ' . htmlspecialchars($stmt->error));
+            echo ('Error with execute: ' . htmlspecialchars($stmt->error));
         }
 
         // Close statement
         mysqli_stmt_close($stmt);
+        header('Location: ./places_dashboard.php');
     }
+
+    
+
+
 
 
 
@@ -179,10 +194,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
     <title>Contact Us</title>
