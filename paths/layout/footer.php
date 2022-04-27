@@ -27,7 +27,7 @@
 
       <ul class="list-unstyled">
         <li>
-          <a href="/paths/landing_page/imprint.php">Imprint</a>
+          <a href="/~bassefa/paths/landing_page/imprint.php">Imprint</a>
         </li>
       </ul>
 
@@ -42,7 +42,7 @@
 
       <ul class="list-unstyled">
         <li>
-          <a href="/paths/landing_page/about_us.php">About us</a>
+          <a href="/~bassefa/paths/landing_page/about_us.php">About us</a>
         </li>
         
       </ul>

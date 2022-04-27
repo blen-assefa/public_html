@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["place_id"] = $param_place_id;
 
                 // Redirect user to welcome page
-                header("location: /paths/places/places_dashboard.php");
+                header("location: /~bassefa/paths/places/places_dashboard.php");
             } else {
                
                 echo "Oops! Something went wrong. Please try again later. Insert query error";
@@ -127,9 +127,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 
@@ -187,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <input type="reset" class="btn btn-secondary ml-2" value="Reset">
                     </div>
-                    <h9>Already have an account? <a href="/paths/places/places_login.php">Login here</a>.</h9>
+                    <h9>Already have an account? <a href="/~bassefa/paths/places/places_login.php">Login here</a>.</h9>
                 </form>
 
             </div>

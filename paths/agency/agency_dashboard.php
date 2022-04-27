@@ -21,10 +21,10 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/~bassefa/paths/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
     <title>Contact Us</title>
@@ -57,20 +57,20 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
             <div class="row marketing my-5">
                 <div class="col-lg-6">
 
-                    <a href="/paths/agency/agency_add_hospital.php "><button type="button" class="back">Add Hospitals</button></a>
+                    <a href="/~bassefa/paths/agency/agency_add_hospital.php "><button type="button" class="back">Add Hospitals</button></a>
 
 
-                    <a href="/paths/agency/agency_visitor.php"><button type="button" class="back">View Visitors</button></a>
+                    <a href="/~bassefa/paths/agency/agency_visitor.php"><button type="button" class="back">View Visitors</button></a>
                     
-                    <a href="/paths/agency/agency_visited_places.php"><button type="button" class="back">View Visited Places</button></a>
+                    <a href="/~bassefa/paths/agency/agency_visited_places.php"><button type="button" class="back">View Visited Places</button></a>
 
                 </div>
 
                 <div class="col-lg-6">
-                    <a href="/paths/agency/agency_places.php"><button type="button" class="back">View Places</button></a>
+                    <a href="/~bassefa/paths/agency/agency_places.php"><button type="button" class="back">View Places</button></a>
 
 
-                    <a href="/paths/agency/agency_hospital.php"><button type="button" class="back">View Hospitals</button></a>
+                    <a href="/~bassefa/paths/agency/agency_hospital.php"><button type="button" class="back">View Hospitals</button></a>
 
                 </div>
 

@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["huser"]) && isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: /paths/agency/agency_dashboard.php");
+    header("location: /~bassefa/paths/agency/agency_dashboard.php");
     exit;
 }
 
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION['auser'] = $agent_username;
 
                             // Redirect user to welcome page
-                            header("location: /paths/agency/agency_dashboard.php");
+                            header("location: /~bassefa/paths/agency/agency_dashboard.php");
                         } else {
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid Password or Username";
@@ -102,9 +102,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
     <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label>Password</label>
                         <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <small id="loginHelp" class="form-text text-muted float-right"><a href="/paths/auth/forgot-password.php">Forgot password</a></small>
+                        <small id="loginHelp" class="form-text text-muted float-right"><a href="/~bassefa/paths/auth/forgot-password.php">Forgot password</a></small>
 
                     </div>
 

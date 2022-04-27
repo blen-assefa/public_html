@@ -13,17 +13,17 @@
             </li>
            
             <li class="nav-item px-2">
-                <a class="nav-link <?php echo ($current_page === 'about') ? 'active' : ''; ?> " href="/paths/landing_page/about_us.php">About us</a>
+                <a class="nav-link <?php echo ($current_page === 'about') ? 'active' : ''; ?> " href="/~bassefa/paths/landing_page/about_us.php">About us</a>
             </li>
           
             <?php
             
             // Check if the user is logged in, if not then redirect him to login page
             if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-                echo "<li class=\"nav-item px-2\"><a class=\"nav-link <?php echo ($current_page === 'login') ? 'active' : ''; ?> \"  href=\"/paths/auth/login_portal.php\">Log in</a></li>";
-                echo "<li class=\"nav-item px-2 \"><a class=\"nav-link <?php echo ($current_page === 'register') ? 'active' : ''; ?> \" href=\"/paths/auth/register_portal.php\">Register</a></li>";
+                echo "<li class=\"nav-item px-2\"><a class=\"nav-link <?php echo ($current_page === 'login') ? 'active' : ''; ?> \"  href=\"/~bassefa/paths/auth/login_portal.php\">Log in</a></li>";
+                echo "<li class=\"nav-item px-2 \"><a class=\"nav-link <?php echo ($current_page === 'register') ? 'active' : ''; ?> \" href=\"/~bassefa/paths/auth/register_portal.php\">Register</a></li>";
             } else {
-                echo "<li class=\"nav-item px-2\"><a class=\"nav-link\" href=\"/paths/auth/logout.php\">Log out</a></li>";
+                echo "<li class=\"nav-item px-2\"><a class=\"nav-link\" href=\"/~bassefa/paths/auth/logout.php\">Log out</a></li>";
             }
             ?>
         </ul>
