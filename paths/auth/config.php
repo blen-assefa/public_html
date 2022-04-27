@@ -4,16 +4,16 @@
 // Database credentials. Assuming you are running MySQL
 // server with default setting (user 'root' with no password) 
 
-
+/*
 define('DB_SERVER', '127.0.0.1');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'NewPass123');
+*/
 
-/*
+
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'seteam17');
 define('DB_PASSWORD', 'XFc73r0J');
-*/
 define('DB_NAME', 'seteam17');
 
 // Attempt to connect to MySQL database 
