@@ -17,10 +17,10 @@ if (!isset($_SESSION["auser"]) && !isset($_SESSION["loggedin"]) || $_SESSION["lo
 <head>
     <title>Corona Archive - Places List</title>
     <meta name="viewport" , content="width = device-width, initial-scale=1">
-    <link rel="stylesheet" href="/~bassefa/paths/css/table.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/style.css">
+    <link rel="stylesheet" href="/~bassefa/assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" />
 

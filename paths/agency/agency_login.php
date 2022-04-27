@@ -102,9 +102,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/stylesheet.css">
-    <link rel="stylesheet" type="text/css" href="/~bassefa/paths/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/~bassefa/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
     <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
